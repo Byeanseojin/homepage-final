@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mbti01</title>
+    <style>
+        body{
+            background-image: url(imgs/01mbti_title.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100% 100px;
+            background-color:rgba(255, 209, 252, 0.441);
+            width: 100%;
+            margin: auto;
+        }
+        hr {
+            border-style: solid;
+            border-width: 4px;
+            border-color: rgba(253, 202, 250, 0.546);
+        }
+        .click{
+            color: rgb(246, 122, 140);
+            background-color:;
+            text-align: center;
+            font-size: 35px;
+            border-radius: 30px;
+        }
+        .font_big{
+            font-size: 100px;
+        }
+        .font_bold{
+            font-weight:bold;
+        }
+        .font_center{
+            text-align:center;
+        }
+        .font_none{
+            text-decoration: none;
+        }
+        .button1 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #25f1cf;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 0 72px;
+        }
+        .button2 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #ff5a5a;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 0 72px 0 0;
+        }
+        .button3{
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #cc6cff;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+        }
+        .button4{
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #aaff6d;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 0 72px;
+        }
+        .button5 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #ffaf5a;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 72px 72px;
+        }
+        .button6{
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #f872fa;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 36px 72px 0 0;
+        }
+        .button7 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #4ac9ff;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 36px 0;
+        }
+        .button8 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 220px;
+            height: 200px;
+            background-color: #fff959;
+            color: rgb(255, 255, 255);
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 72px 72px;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 15px 15px;
+            background-color: #faa4ff;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="main.html" class="home-button">Home</a>
+    <h1 class="click">버튼을 클릭하세요! Please click these buttons!</h1>
+    <hr><br><br>
+    <div>
+        <a href="mbti01_accessory/01_E.html" class="button1 font_big font_italic font_bold font_center font_none ">E</a>
+        <a href="mbti01_accessory/01_S.html" class="button2 font_big font_italic font_bold font_center font_none">S</a>
+        <a href="mbti01_accessory/01_T.html" class="button3 font_big font_italic font_bold font_center font_none" >T</a>
+        <a href="mbti01_accessory/01_J.html" class="button4 font_big font_italic font_bold font_center font_none">J</a>
+    </div>
+    <div>
+        <a href="mbti01_accessory/01_I.html" class="button5 font_big font_italic font_bold font_center font_none">I</a>
+        <a href="mbti01_accessory/01_N.html" class="button6 font_big font_italic font_bold font_center font_none">N</a>
+        <a href="mbti01_accessory/01_F.html" class="button7 font_big font_italic font_bold font_center font_none">F</a>
+        <a href="mbti01_accessory/01_P.html" class="button8 font_big font_italic font_bold font_center font_none">P</a>
+    </div>
+</body>
+</html>

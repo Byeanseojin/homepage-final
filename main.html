@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>main.mbti</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            background-image: url(imgs/main_mbti.png);
+            background-size: 100%; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .header{
+            color: rgb(55, 55, 55);
+            text-align: center;
+        }
+
+        a:hover {
+            color: rgb(255, 111, 162);
+        }
+        
+        a{
+            color: rgb(255, 255, 255);
+            font-size: 27px;
+            font-weight: bold;
+        }
+        .box1{
+            width:30%; 
+            height: 80px;
+            background-color: rgba(120, 220, 185, 0.578);
+            float: left;
+            margin: 30px 0px 15px 430px ; 
+            padding:10px;
+            border-radius: 40px ;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .box2{
+            width:44%; 
+            height: 210px;
+            background-color: rgba(248, 121, 163, 0.678);
+            margin: 20px 24px; 
+            padding:10px;
+            float: left;
+            border-radius: 50px 50px 50px 50px ;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .box3{
+            width:44%; 
+            height: 210px;
+            background-color: rgba(79, 159, 250, 0.594); 
+            margin: 20px 24px; 
+            padding:10px;
+            float: right;
+            border-radius: 50px 50px 50px 50px ;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .box4{
+            width:44%; 
+            height: 210px;
+            background-color:rgba(157, 108, 248, 0.612);
+            margin: 30px 0px 60px 24px; 
+            padding:10px;
+            float: left;
+            border-radius: 50px 50px 50px 50px ;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .box5{
+            width:44%; 
+            height: 210px;
+            background-color:rgba(255, 199, 102, 0.705) ;
+            margin: 30px 24px 60px 0px; 
+            padding:10px;
+            float: right;
+            border-radius: 50px 50px 50px 50px ;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: block;
+        }
+        .box1:hover,
+        .box2:hover,
+        .box3:hover,
+        .box4:hover,
+        .box5:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>     
+        $(document).ready(function() {
+            animateText('.header');
+      
+            function animateText(element) {
+                var text = $(element).text();
+                $(element).empty();
+                var characters = text.split('');
+      
+                $.each(characters, function(index, char) {
+                    var span = $('<span>')
+                        .text(char)
+                        .css({
+                            position: 'relative',
+                            top: '-20px',
+                            opacity: 0,
+                            color: getGradientColor(index, characters.length)
+                        })
+                        .appendTo(element)
+                        .delay(100 * index)
+                        .animate({
+                            top: 0,
+                            opacity: 1,
+                            color: getGradientColor(index, characters.length)
+                        }, 300);
+                });
+      
+                // Show the main page after a delay
+                setTimeout(function() {
+                    $('.box1, .box2, .box3, .box4, .box5').show(); // Show the boxes
+                }, characters.length * 100); // Delay based on the number of characters
+            }
+      
+            function getGradientColor(index, totalCharacters) {
+                var startColor = [250, 162, 215]; // 시작 색상 (R, G, B)
+                var endColor = [248, 117, 154]; // 종료 색상 (R, G, B)
+                var color = [];
+          
+                for (var i = 0; i < 3; i++) {
+                    var gradient = Math.floor((endColor[i] - startColor[i]) / totalCharacters);
+                    color[i] = startColor[i] + gradient * index;
+                }
+          
+                return 'rgb(' + color.join(',') + ')';
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 class="header">서진이의 'MBTI'정보소</h1><hr>
+    <div class="box1">
+        <p><a href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC" style="text-decoration: none;">MBTI성격유형검사링크</a></p>
+    </div>
+    <div class="box2">
+        <br><br><br><p><a href="mbti01.html" style="text-decoration: none;">MBTI 성격유형</a></p>     
+    </div>
+    <div class="box3">
+        <br><br><br><p><a href="mbti02.html" style="text-decoration: none;">MBTI 16가지 유형</a></p>
+    </div>
+    <div class="box4">
+        <br><br><br> <p><a href="mbti03.html" style="text-decoration: none;">MBTI 미니테스트</a></p>   
+    </div>
+    <div class="box5">
+        <br><br><br><p><a href="login.html" style="text-decoration: none;">더 많은 서비스</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mbti03</title>
+    <style>
+        body{
+            background-color: rgba(197, 176, 228, 0.452);
+        }
+        h1{
+            width:30% ;
+            height: 20% ;
+            text-align: center;
+            margin:40px 430px ;
+            color:white;
+            background-color: rgba(181, 143, 241, 0.683);
+            border-radius: 50px;
+        }
+        .button1 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(207, 156, 254, 0.726);
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 20px 50px 20px 190px;
+            text-decoration: none;
+            }
+        .button2 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            background-color: rgba(204, 149, 255, 0.808);
+            color: rgb(255, 255, 255);
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 20px 20px 20px 90px;
+            text-decoration: none;
+            }
+        .button3 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(195, 131, 255, 0.726);         
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 20px 55px 20px  110px;
+            text-decoration: none;
+            }
+        .button4 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(184, 107, 255, 0.726);
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 30px 55px;;
+            text-decoration: none;
+            }
+        .button5 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            background-color: rgba(178, 101, 251, 0.726);
+            color: rgb(255, 255, 255);
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 36px 55px;
+            text-decoration: none;
+            }
+        .button6 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            background-color: rgba(176, 91, 255, 0.731);
+            color: rgb(255, 255, 255);
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 36px 55px;           
+            text-decoration: none;
+            }
+        .button7 {
+            display: inline-flex; /* 앵커 태그 안의 내용물을 가운데 정렬하기 위해 inline-flex로 변경 */
+            width: 190px;
+            height: 190px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(167, 74, 254, 0.699);       
+            border-radius: 50px;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            margin: 36px 55px;
+            text-decoration: none;
+            }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 초기 상태 설정
+            $('.button1, .button2, .button3, .button4, .button5, .button6, .button7').css({opacity: '0'});
+
+            // 버튼들 순차적으로 보이기
+            $('.button1').delay(500).animate({opacity: '1'}, 300);
+            $('.button2').delay(800).animate({opacity: '1'}, 300);
+            $('.button3').delay(1100).animate({opacity: '1'}, 300);
+            $('.button4').delay(1400).animate({opacity: '1'}, 300);
+            $('.button5').delay(1700).animate({opacity: '1'}, 300);
+            $('.button6').delay(2000).animate({opacity: '1'}, 300);
+            $('.button7').delay(2300).animate({opacity: '1'}, 300);
+        });
+    </script>
+</head>
+<body>
+<h1>MBTI 미니테스트</h1>
+        <div class="nemo">
+            <a href="https://www.ktestone.com/kapable.github.io/fishShapedBun/" class="button1">붕어빵테스트</a>
+            <a href="https://ktestone.com/kapable.github.io/personalColor2022/" class="button2">퍼스널컬러테스트</a>
+            <a href="https://www.ktestone.com/kapable.github.io/oneSidedLove/" class="button3">캔디테스트</a>
+        </div>
+        <div class="nemo1">
+            <a href="https://ktestone.com/kapable.github.io/labelSticker/" class="button4">스티커테스트</a>
+            <a href="https://animalschooltest.netlify.app/" class="button5">동물테스트</a>
+            <a href="https://ktestone.com/kapable.github.io/bread2023/" class="button6">식빵테스트</a>
+            <a href="https://www.ktestone.com/kapable.github.io/mailForMe/" class="button7">편지테스트</a>
+        </div>
+</body>
+</html>

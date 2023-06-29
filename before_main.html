@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Redirecting Page</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            background-image: url(imgs/main_mbti.png);
+            background-size: 100%; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            color: rgb(87, 87, 87);
+            transform: translate(-50%, -50%);
+            font-size: 70px;
+        }
+        
+        .bounce-animation span {
+            display: inline-block;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var spans = $(".bounce-animation span");
+            spans.each(function(index) {
+                $(this).css("animation-delay", (index * 0.1) + "s");
+            });
+        });
+        
+        setTimeout(function() {
+            window.location.href = "main.html"; // 대상 페이지의 URL을 여기에 입력하세요.
+        }, 2000); // 5초 후에 리다이렉션 수행
+    </script>
+</head>
+<body>
+    <h1 class="bounce-animation">
+        <span>서</span>
+        <span>진</span>
+        <span>이</span>
+        <span>의</span>
+        <span> </span>
+        <span>m</span>
+        <span>b</span>
+        <span>t</span>
+        <span>i</span>
+    </h1>
+</body>
+</html>
